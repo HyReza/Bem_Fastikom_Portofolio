@@ -1,0 +1,417 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+/*
+* navigasi bar
+*/
+.wrapper {
+    width: 1024px;
+    margin : auto;
+    padding: 5px 0px 5px 0px
+}
+
+/*
+* Menu
+*/
+nav {
+    background-color: #222831;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.menu {
+    width: 50%;
+}
+
+.menu > ul {
+    display: flex;
+    list-style:  none;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo > img {
+    height: 75px;
+}
+
+/*
+* hero
+*/
+
+header {
+    background: url(/asset/img/image1.JPG);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: "Kanit", sans-serif;
+    letter-spacing: 5px;
+    text-shadow: 0 0 3px #000;
+}
+
+.header-opacity {
+    background-color: #222831;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-jumbotron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.header-jumbotron > h4 {
+    color: #ffce10;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header-jumbotron > h5 {
+    color: #fff;
+    margin: 0px;
+    padding: 5px;
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+}
+
+.header-jumbotron > p {
+    padding: 5px;
+    margin: 0px 5px 20px 5px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    text-shadow: none;
+}
+
+.button {
+    background-color: #ffce10;
+    padding: 5px 10px 5px 10px;
+    font-family: "Kanit", sans-serif;
+    border-radius: 5px;
+}
+
+.button-xl {
+    font-size: 1.4rem;
+    padding: 20px;
+}
+
+/*
+* Tentang Kami
+*/
+#tentang-kami{
+    width: 100%;
+    background-color: #222831;
+    color: #fff;
+}
+
+#tentang-kami > .wrapper{
+    padding: 50px 0px 60px 0px;
+}
+
+#tentang-kami > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+#tentang-kami > .wrapper > h4 > span {
+    color: #ffce10 ;
+}
+
+#tentang-kami > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto, 1fr);
+    grid-gap: 50px;
+}
+
+.grid > .item1 {
+    border: 1px solid #666;
+    background-image: url(/asset/img/image1.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 5px;
+    position: relative;
+    height: 210px;
+}
+.grid > .item2 {
+    border: 1px solid #666;
+    background-image: url(/asset/img/image2.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 5px;
+    position: relative;
+    height: 210px;
+}
+.grid > .item3 {
+    border: 1px solid #666;
+    background-image: url(/asset/img/image3.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 5px;
+    position: relative;
+    height: 210px;
+}
+.grid > .item4 {
+    border: 1px solid #666;
+    background-image: url(/asset/img/image4.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 5px;
+    position: relative;
+    height: 210px;
+}
+.grid > .item5 {
+    border: 1px solid #666;
+    background-image: url(/asset/img/image5.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 5px;
+    position: relative;
+    height: 210px;
+}
+.grid > .item6 {
+    border: 1px solid #666;
+    background-image: url(/asset/img/image6.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 5px;
+    position: relative;
+    height: 210px;
+}
+
+/*
+* Salam Gubenur
+*/
+
+#salam-gubenur{
+    background-color: #EEEEEE;
+    color: #333;
+}
+
+#salam-gubenur > .wrapper{
+    padding: 50px 0px 60px 0px;
+}
+
+#salam-gubenur > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+#salam-gubenur > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+#salam-gubenur > .wrapper > div {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#salam-gubenur > .wrapper > div > .foto {
+    width: 30%;
+}
+
+#salam-gubenur > .wrapper > div > .foto > img {
+    max-width: 100%;
+}
+
+#salam-gubenur > .wrapper > div > .quotes {
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/*
+* Agenda Kegiatan
+*/
+#agenda-kegiatan {
+    background-color: #393e46;
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+}
+
+#agenda-kegiatan > .wrapper{
+    padding: 50px 0px 60px 0px;
+}
+
+#agenda-kegiatan > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+#agenda-kegiatan > .wrapper > p {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+#agenda-kegiatan > .wrapper > h4 > span {
+    color: #ffce10 ;
+}
+
+/*
+* Footer
+*/
+
+footer {
+	background-color: #222831;
+	color: #fff;
+	padding: 20px 0;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.logo {
+	flex-basis: 30%;
+	text-align: left;
+}
+
+.logo > img {
+	height: 80px;
+	margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.logo > p {
+    font-size: 26px;
+    font-family: "Anta", sans-serif;
+}
+
+.description {
+	flex-basis: 30%;
+	text-align: left;
+}
+
+.social-media {
+	flex-basis: 30%;
+	text-align: right;
+}
+
+.social-icon {
+	color: #fff;
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+	.container {
+		flex-direction: column;
+	}
+	
+	.logo, .description, .social-media {
+		flex-basis: 100%;
+		text-align: center;
+	}
+}
+
+/* PHONE */
+@media (max-width: 562px) {
+	.container {
+		flex-direction: column;
+	}
+	
+	.logo, .description, .social-media {
+		flex-basis: 100%;
+		text-align: center;
+	}
+
+    .menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        background-color: #262626;
+        display: none;
+    }
+
+    .header-jumbotron > h4 {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+    
+    .header-jumbotron > h5 {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+    
+    .button-xl {
+        font-size: .9rem;
+        padding: 10px;
+    }
+}
