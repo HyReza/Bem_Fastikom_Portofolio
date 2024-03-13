@@ -9,7 +9,7 @@
     --white-color: #FFFFFF;
     --text-hover-color: #DDDDDD;
     --yellow-color-main: #FFCE10;
-    --yellow-color-main-hover: #cca60e;
+    --yellow-color-mxain-hover: #cca60e;
     --header-mobile-font: 1.5rem;
     --text-mobile-font: 1rem;
     --text-sm: 14px;
@@ -200,6 +200,8 @@ ul li {
 #tentang-kami {
     width: 100%;
     padding: 5rem 1rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
 }
 
 #tentang-kami .tentang-kami-heading,
@@ -277,6 +279,10 @@ ul li {
 }
 
 /* AGENDA KEGIATAN */
+#agenda-kegiatan {
+    background-color: var(--text-hover-color);
+}
+
 #agenda-kegiatan .grid-wrapper {
     padding: 5rem 1rem;
 }
@@ -300,6 +306,8 @@ ul li {
 /* FOOTER */
 #footer {
     padding: 5rem 1rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
 }
 
 #footer .bottom-footer .description, #footer .bottom-footer .social-media, #footer .bottom-footer .copyright {
