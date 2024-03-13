@@ -1,417 +1,446 @@
-html,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #222831;
+    --white-color: #FFFFFF;
+    --text-hover-color: #DDDDDD;
+    --yellow-color-main: #FFCE10;
+    --yellow-color-main-hover: #cca60e;
+    --header-mobile-font: 1.5rem;
+    --text-mobile-font: 1rem;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 20px;
+    --text-heading-main: 26px;
+    --text-heading-secondary: 22px;
+    --text-heading-last: 18px;
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
     font-size: 14px;
     font-family: "Poppins", sans-serif;
 }
+
 /*
-* navigasi bar
+* GLOBAL RESET COMPONENT
 */
 .wrapper {
-    width: 1024px;
-    margin : auto;
-    padding: 5px 0px 5px 0px
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+ul li {
+    list-style: none;
 }
 
 /*
-* Menu
+* NAV MENU
 */
-nav {
-    background-color: #222831;
-    color: #fff;
+#navbar {
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    position: relative;
+    top: 0;
+    z-index: 999;
+}
+
+#navbar.onScroll {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    left: 0;
 }
-nav > .wrapper {
+
+.nav-wrapper {
+    width: 100%;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
     align-items: center;
+    padding: 0 1.5rem;
 }
 
-.menu {
-    width: 50%;
-}
-
-.menu > ul {
-    display: flex;
-    list-style:  none;
-    margin: 0px;
-    padding: 0px;
-    justify-content: space-between;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-.logo {
+.nav-wrapper .logo {
     display: flex;
     align-items: center;
 }
-.logo > img {
-    height: 75px;
+
+.nav-wrapper .logo img {
+    height: 50px;
 }
 
-/*
-* hero
-*/
-
-header {
-    background: url(/asset/img/image1.JPG);
+.nav-wrapper .menu {
+    width: 100%;
     height: 100vh;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    font-family: "Kanit", sans-serif;
-    letter-spacing: 5px;
-    text-shadow: 0 0 3px #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 300ms ease;
+    transform: translateX(-100%);
+    background-color: var(--main-color);
 }
 
-.header-opacity {
-    background-color: #222831;
-    width: 100%;
+.nav-wrapper .menu.active {
+    transform: translateX(0);
+}
+
+.nav-wrapper .menu ul {
     height: 100%;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.header-jumbotron {
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-wrapper .menu ul li {
+    margin-bottom: 1rem;
+}
+
+.nav-wrapper .menu ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: var(--text-sm);
+}
+
+.nav-wrapper .menu ul li a:hover {
+    color: var(--text-hover-color);
+}
+
+.nav-wrapper .nav-menu-button, .nav-wrapper .nav-menu-close-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    background-color: var(--white-color);
+}
+
+.nav-wrapper .nav-menu-close-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+}
+
+/*  */
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/asset/img/image1.JPG) center no-repeat;
+    background-size: cover;
+}
+
+#header .header-jumbotron {
+    position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-}
-.header-jumbotron > h4 {
-    color: #ffce10;
-    font-size: 2rem;
-    margin: 0;
-    padding: 0;
+    padding: 0 1.5rem;
 }
 
-.header-jumbotron > h5 {
-    color: #fff;
-    margin: 0px;
-    padding: 5px;
-    font-size: 3.5rem;
-    line-height: 4.8rem;
-    text-transform: uppercase;
-}
-
-.header-jumbotron > p {
-    padding: 5px;
-    margin: 0px 5px 20px 5px;
-    color: #fff;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-    text-shadow: none;
-}
-
-.button {
-    background-color: #ffce10;
-    padding: 5px 10px 5px 10px;
-    font-family: "Kanit", sans-serif;
-    border-radius: 5px;
-}
-
-.button-xl {
-    font-size: 1.4rem;
-    padding: 20px;
-}
-
-/*
-* Tentang Kami
-*/
-#tentang-kami{
+#header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #222831;
-    color: #fff;
+    height: 100%;
+    background-color: var(--main-color);
+    opacity: .7;
 }
 
-#tentang-kami > .wrapper{
-    padding: 50px 0px 60px 0px;
+#header .header-jumbotron * {
+    margin-bottom: 1rem;
 }
 
-#tentang-kami > .wrapper > h4 {
+#header .header-jumbotron .subheading {
+    font-size: var(--text-heading-last);
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+#header .header-jumbotron .heading {
+    font-size: var(--text-heading-main);
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+#header .header-jumbotron .paragraph {
+    font-size: var(--text-sm);
+    color: var(--white-color);
+}
+
+.header-button {
+    padding: .8rem 1.8rem;
+    text-decoration: none;
+    transition: all 300ms ease;
+    color: var(--main-color);
+    background-color: var(--yellow-color-main);
+}
+
+.header-button:hover {
+    background-color: var(--yellow-color-main-hover);
+}
+
+/* TENTANG KAMI */
+#tentang-kami {
+    width: 100%;
+    padding: 5rem 1rem;
+}
+
+#tentang-kami .tentang-kami-heading,
+#salam-gubernur .salam-gubernur-heading,
+#agenda-kegiatan .agenda-kegiatan-heading
+{
+    padding: 3rem .5rem;
     text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: "Kanit", sans-serif;
 }
 
-#tentang-kami > .wrapper > h4 > span {
-    color: #ffce10 ;
+#tentang-kami .tentang-kami-heading h4,
+#salam-gubernur .salam-gubernur-heading h4,
+#agenda-kegiatan .agenda-kegiatan-heading h4
+{
+    font-size: var(--text-heading-main);
+    font-weight: 600;
 }
 
-#tentang-kami > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
+#tentang-kami .tentang-kami-heading p,
+#salam-gubernur .salam-gubernur-heading p,
+#agenda-kegiatan .agenda-kegiatan-heading p
+{
+    font-size: var(--text-sm);
 }
 
-.grid {
+#tentang-kami .grid-wrapper {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto, 1fr);
-    grid-gap: 50px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
 }
 
-.grid > .item1 {
-    border: 1px solid #666;
-    background-image: url(/asset/img/image1.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    border-radius: 5px;
-    position: relative;
-    height: 210px;
-}
-.grid > .item2 {
-    border: 1px solid #666;
-    background-image: url(/asset/img/image2.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    border-radius: 5px;
-    position: relative;
-    height: 210px;
-}
-.grid > .item3 {
-    border: 1px solid #666;
-    background-image: url(/asset/img/image3.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    border-radius: 5px;
-    position: relative;
-    height: 210px;
-}
-.grid > .item4 {
-    border: 1px solid #666;
-    background-image: url(/asset/img/image4.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    border-radius: 5px;
-    position: relative;
-    height: 210px;
-}
-.grid > .item5 {
-    border: 1px solid #666;
-    background-image: url(/asset/img/image5.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    border-radius: 5px;
-    position: relative;
-    height: 210px;
-}
-.grid > .item6 {
-    border: 1px solid #666;
-    background-image: url(/asset/img/image6.JPG);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    border-radius: 5px;
-    position: relative;
-    height: 210px;
+#tentang-kami .grid-wrapper .grid-item {
+    width: 100%;
 }
 
-/*
-* Salam Gubenur
-*/
-
-#salam-gubenur{
-    background-color: #EEEEEE;
-    color: #333;
+#tentang-kami .grid-wrapper .grid-item img {
+    width: 100%;
+    height: 100%;
 }
 
-#salam-gubenur > .wrapper{
-    padding: 50px 0px 60px 0px;
+/* SALAM GUBERNUR */
+#salam-gubernur {
+    padding: 5rem 1rem;
 }
 
-#salam-gubenur > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: "Kanit", sans-serif;
-}
-
-#salam-gubenur > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
-}
-
-#salam-gubenur > .wrapper > div {
-    display: flex;
-    width: 70%;
-    margin: auto;
-    justify-content: space-between;
+.salam-gubernur-card {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
     align-items: center;
+    margin: 2rem 0;
 }
 
-#salam-gubenur > .wrapper > div > .foto {
-    width: 30%;
+.salam-gubernur-card .foto {
+    width: 100%;
 }
 
-#salam-gubenur > .wrapper > div > .foto > img {
-    max-width: 100%;
+.salam-gubernur-card img {
+    width: 100%;
 }
 
-#salam-gubenur > .wrapper > div > .quotes {
-    width: 70%;
-    padding: 20px;
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 10px;
+.salam-gubernur-card .quotes {
+    width: 100%;
+    padding: 3rem 0;
 }
 
-/*
-* Agenda Kegiatan
-*/
-#agenda-kegiatan {
-    background-color: #393e46;
-    color: #fff;
-    padding: 20px 0px 20px 0px;
+.salam-gubernur-card blockquote {
+    font-size: var(--text-lg);
+    font-style: italic;
 }
 
-#agenda-kegiatan > .wrapper{
-    padding: 50px 0px 60px 0px;
+.salam-gubernur-card p {
+    font-size: var(--text-md);
+    margin-top: 1rem;
 }
 
-#agenda-kegiatan > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: "Kanit", sans-serif;
+/* AGENDA KEGIATAN */
+#agenda-kegiatan .grid-wrapper {
+    padding: 5rem 1rem;
 }
 
-#agenda-kegiatan > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
+#agenda-kegiatan .grid-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
 }
 
-#agenda-kegiatan > .wrapper > h4 > span {
-    color: #ffce10 ;
+#agenda-kegiatan .grid-wrapper .grid-item {
+    width: 100%;
 }
 
-/*
-* Footer
-*/
-
-footer {
-	background-color: #222831;
-	color: #fff;
-	padding: 20px 0;
+#agenda-kegiatan .grid-wrapper .grid-item img {
+    width: 100%;
+    height: 100%;
 }
 
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	max-width: 1100px;
-	margin: 0 auto;
+/* FOOTER */
+#footer {
+    padding: 5rem 1rem;
 }
 
-.logo {
-	flex-basis: 30%;
-	text-align: left;
+#footer .bottom-footer .description, #footer .bottom-footer .social-media, #footer .bottom-footer .copyright {
+    margin-top: 3rem;
 }
 
-.logo > img {
-	height: 80px;
-	margin-bottom: 10px;
-    margin-right: 20px;
+#footer .bottom-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
-.logo > p {
-    font-size: 26px;
-    font-family: "Anta", sans-serif;
+#footer .logo {
+    width: 100px;
 }
 
-.description {
-	flex-basis: 30%;
-	text-align: left;
+#footer .logo img {
+    width: 100%;
 }
 
-.social-media {
-	flex-basis: 30%;
-	text-align: right;
+#footer h4 {
+    margin-bottom: 1rem;
+    font-size: var(--text-heading-secondary);
+    font-weight: 600;
 }
 
-.social-icon {
-	color: #fff;
-	font-size: 24px;
-	margin-left: 10px;
+#footer .description p {
+    font-size: var(--text-sm);
 }
 
-/* TABLET */
-@media (max-width: 992px) {
-	.container {
-		flex-direction: column;
-	}
-	
-	.logo, .description, .social-media {
-		flex-basis: 100%;
-		text-align: center;
-	}
+#footer .medsos-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-/* PHONE */
-@media (max-width: 562px) {
-	.container {
-		flex-direction: column;
-	}
-	
-	.logo, .description, .social-media {
-		flex-basis: 100%;
-		text-align: center;
-	}
+#footer .medsos-wrapper a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    background-color: var(--text-hover-color);
+    color: var(--main-color);
+    text-decoration: none;
+}
 
-    .menu {
-        width: 100%;
+#footer .medsos-wrapper a:hover {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+.copyright {
+    font-size: var(--text-sm);
+    padding-top: 7rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-wrapper {
+        height: 80px;
+        position: relative;
+    }
+
+    .nav-wrapper .menu {
+        position: relative;
         height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        background-color: #262626;
+        transform: translateX(0);
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+        transition: none;
+    }
+
+    .nav-wrapper .menu ul {
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .nav-wrapper .menu ul li {
+        margin-bottom: unset;
+        margin-left: 2rem;
+    }
+
+    .nav-wrapper .menu ul li a {
+        font-size: var(--text-md);
+    }
+
+    .nav-wrapper .nav-menu-button {
         display: none;
     }
 
-    .header-jumbotron > h4 {
-        font-size: 1.3rem;
-        line-height: 1.4;
+    .nav-wrapper .nav-menu-close-button {
+        display: none;
+    }
+
+    /* TENTANG KAMI */
+    #tentang-kami .grid-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #tentang-kami {
+        height: auto;
+    }
+
+    /* SALAM GUBERNUR */
+    .salam-gubernur-card {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
     }
     
-    .header-jumbotron > h5 {
-        font-size: 1.5rem;
-        line-height: 1.4;
+    .salam-gubernur-card .foto {
+        width: 100%;
     }
     
-    .button-xl {
-        font-size: .9rem;
-        padding: 10px;
+    .salam-gubernur-card .quotes {
+        grid-column: span 2;
+        width: 100%;
+        padding: unset;
+    }
+
+    /* AGENDA KEGIATAN */
+    #agenda-kegiatan .grid-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* FOOTER */
+    #footer .bottom-footer .description, #footer .bottom-footer .social-media, #footer .bottom-footer .copyright {
+        margin-top: 0;
+    }
+
+
+    #footer .bottom-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #footer .social-media {
+        display: flex;
+        flex-direction: column;
     }
 }

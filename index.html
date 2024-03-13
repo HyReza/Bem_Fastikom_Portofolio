@@ -10,94 +10,144 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
-    <script src="/js/script.js"></script>
     <title>BEM FASTIKOM</title>
 </head>
 <body>
-    <!-- Navigasi Bar-->
-        <nav>
-            <div class="wrapper">
-                <div class="logo"><img src="/asset/img/logo.png" alt=""></div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#tentang-kami">Tentang Kami</a></li>
-                        <li><a href="#agenda-kegiatan">Agenda Kegiatan</a></li>
-                    </ul>
-                </div>
+    <nav id="navbar">
+        <div class="wrapper nav-wrapper">
+            <div class="logo">
+                <img src="/asset/img/logo.png" alt="">
             </div>
-        </nav>
-    <!-- End Navigasi Bar-->
-    <!-- Hero -->
-    <header>
-        <div class="header-opacity"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#agenda-kegiatan">Agenda Kegiatan</a></li>
+                    <li>
+                        <button class="nav-menu-close-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024">
+                                <path fill="currentColor" fill-rule="evenodd" d="M799.855 166.312c.023.007.043.018.084.059l57.69 57.69c.041.041.052.06.059.084a.118.118 0 0 1 0 .069c-.007.023-.018.042-.059.083L569.926 512l287.703 287.703c.041.04.052.06.059.083a.118.118 0 0 1 0 .07c-.007.022-.018.042-.059.083l-57.69 57.69c-.041.041-.06.052-.084.059a.118.118 0 0 1-.069 0c-.023-.007-.042-.018-.083-.059L512 569.926L224.297 857.629c-.04.041-.06.052-.083.059a.118.118 0 0 1-.07 0c-.022-.007-.042-.018-.083-.059l-57.69-57.69c-.041-.041-.052-.06-.059-.084a.118.118 0 0 1 0-.069c.007-.023.018-.042.059-.083L454.073 512L166.371 224.297c-.041-.04-.052-.06-.059-.083a.118.118 0 0 1 0-.07c.007-.022.018-.042.059-.083l57.69-57.69c.041-.041.06-.052.084-.059a.118.118 0 0 1 .069 0c.023.007.042.018.083.059L512 454.073l287.703-287.702c.04-.041.06-.052.083-.059a.118.118 0 0 1 .07 0Z" />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="nav-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path fill="currentColor" d="M.5 7.42h15v1.25H.5zm0 3.6h15v1.25H.5zm0-7.29h15v1.25H.5z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <header id="header">
         <div class="header-jumbotron">
-            <h4>Universitas Muhammadiyah Pekajangan</h4>
-            <h5>Badan Eksekutif Mahasiswa <br> Fakultas Teknik dan Ilmu Komputer</h5>
-            <p>Generasi Mahasiswa Berkualitas Serta Berintegritas Dalam Lingkup Kampus</p>
-            <a href="#" class="button button-xl">Ayok Gabung Sekarang</a>
+            <h4 class="subheading">Universitas Muhammadiyah Pekajangan Pekalongan</h4>
+            <h5 class="heading">Badan Eksekutif Mahasiswa <br> Fakultas Teknik dan Ilmu Komputer</h5>
+            <p class="paragraph">Generasi Mahasiswa Berkualitas Serta Berintegritas Dalam Lingkup Kampus</p>
+            <a href="#" class="header-button">Ayok Gabung Sekarang</a>
         </div>
     </header>
     <main>
-        <!-- Tentang Kami -->
+        <!-- START : TENTANG KAMI -->
         <section id="tentang-kami">
             <div class="wrapper">
-                <h4>Tentang <span> Kami</span></h4>
-                <p>Ikuti berbagai keseruan kami dalam berbagai kegiatan yang ada</p>
-
-                <div class="grid">
-                    <div class="item1"></div>
-                    <div class="item2"></div>
-                    <div class="item3"></div>
+                <div class="tentang-kami-heading">
+                    <h4>Tentang <span> Kami</span></h4>
+                    <p>Ikuti berbagai keseruan kami dalam berbagai kegiatan yang ada</p>
+                </div>
+                <div class="grid-wrapper">
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Salam Hangat gubenur -->
-        <!-- <section id="salam-gubenur">
+        <!-- END : TENTANG KAMI -->
+        <!-- START : SALAM HANGAT GUBERNUR -->
+        <section id="salam-gubernur">
             <div class="wrapper">
-                <h4>Gubenur Bem Fastikom</h4>
-                <p>Salam Hangat Dari Filsafat Selaku Gubenur Badan Eksekutif Mahasiswa Fastikom</p>
-                <div>
-                <div class="foto"><img src="/asset/img/profile.png" alt=""></div>
-                <div class="quotes">
-                    <p>"Salam hangat untuk seluruh civitas akademika Fakultas Fastikom Universitas Muhammadiyah Pekajanga. Bersama-sama, mari kita terus tingkatkan semangat dan prestasi kita. Terima kasih atas dedikasi dan kontribusi kalian semua."</p>
-                    <p>-Filsafat Gubenur BEM FASTIKOM UMPP</p>
+                <div class="salam-gubernur-heading">
+                    <h4>Gubenur Bem Fastikom</h4>
+                    <p>Salam Hangat Dari Filsafat Selaku Gubenur Badan Eksekutif Mahasiswa Fastikom</p>
                 </div>
+                <div class="salam-gubernur-card">
+                    <div class="foto">
+                        <img src="/asset/img/profile.png" alt="Filsafat" />
+                    </div>
+                    <div class="quotes">
+                        <blockquote>"Salam hangat untuk seluruh civitas akademika Fakultas Fastikom Universitas Muhammadiyah Pekajangan. Bersama-sama, mari kita terus tingkatkan semangat dan prestasi kita. Terima kasih atas dedikasi dan kontribusi kalian semua."</blockquote>
+                        <p>-Filsafat Gubenur BEM FASTIKOM UMPP</p>
+                    </div>
                 </div>
             </div>
         </section>
+        <!-- END : SALAM HANGAT GUBERNUR -->
+        <!-- START : AGENDA KEGIATAN -->
         <section id="agenda-kegiatan">
             <div class="wrapper">
-                <h4>Agenda <span>Kegiatan</span></h4>
-                <p>Agenda Kegiatan Badan Eksekutif Mahasiswa Fakultas Teknik dan Ilmu Komputer UMPP</p>
-                <div class="grid">
-                    <div class="item1"></div>
-                    <div class="item2"></div>
-                    <div class="item3"></div>
-                    <div class="item4"></div>
-                    <div class="item5"></div>
-                    <div class="item6"></div>
+                <div class="agenda-kegiatan-heading">
+                    <h4>Agenda <span>Kegiatan</span></h4>
+                    <p>Agenda Kegiatan Badan Eksekutif Mahasiswa Fakultas Teknik dan Ilmu Komputer UMPP</p>
+                </div>
+                <div class="grid-wrapper">
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img src="/asset/img/image1.JPG" alt="" />
+                    </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     </main>
-    <footer>
-		<div class="container">
-			<div class="logo">
-				<img src="/asset/img/logo.png" alt="Logo">
-                <p>BEM <br>FASTIKOM UMPP</p>
-			</div>
-			<div class="description">
-				<p>Badan Eksekutif Mahasiswa Fakultas Teknik dan ILmu Komputer</p>
-                <p>Universitas Muhammadiyah Pekajanga Pekalongan</p>
-			</div>
-			<div class="social-media">
-				<a href="#" class="social-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
-				<a href="#" class="social-icon" title="Twitter"><i class="fa fa-twitter"></i></a>
-				<a href="#" class="social-icon" title="Instagram"><i class="fa fa-instagram"></i></a>
-				<a href="#" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-			</div>
+    <!-- END : AGENDA KEGIATAN -->
+    <!-- START : FOOTER -->
+    <footer id="footer">
+		<div class="wrapper">
+            <div class="logo">
+                <img src="/asset/img/logo.png" alt="Logo">
+            </div>
+            <div class="bottom-footer">
+                <div class="description">
+                    <h4>BEM FASTIKOM UMPP</h4>
+                    <div class="description">
+                        <p>Badan Eksekutif Mahasiswa Fakultas Teknik dan Ilmu Komputer</p>
+                        <p>Universitas Muhammadiyah Pekajangan Pekalongan</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <h4>Follow Media Sosial</h4>
+                    <div class="medsos-wrapper">
+                        <a href="#" class="social-icon" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">Made With 🩷 by BEM Fastikom UMPP</p>
 		</div>
 	</footer>
+    <!-- END : FOOTER -->
+
+    <script src="/js/script.js"></script>
 </body>
 </html>
